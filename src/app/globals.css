@@ -4,6 +4,31 @@
   --main-c: #82cf00;
   --secondary-c: #640446;
 }
+
 body {
-  background-color: black;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #000; /* основа */
+  background-image: radial-gradient(
+      circle at 20% 30%,
+      rgba(130, 207, 0, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(circle at 80% 70%, rgba(130, 207, 0, 0.15), transparent 60%),
+    linear-gradient(115deg, #000000 40%, #0a0a0a 50%, #000000 60%);
+  background-size: 200% 200%;
+  animation: rsDeepMotion 10s ease-in-out infinite;
+  overflow-x: hidden;
+}
+
+@keyframes rsDeepMotion {
+  0% {
+    background-position: 0% 50%, 100% 50%, 0% 0%;
+  }
+  50% {
+    background-position: 100% 50%, 0% 50%, 100% 100%;
+  }
+  100% {
+    background-position: 0% 50%, 100% 50%, 0% 0%;
+  }
 }
