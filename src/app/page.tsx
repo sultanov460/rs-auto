@@ -3,7 +3,7 @@ import Slider from "./widgets/Slider";
 
 const page = () => {
   return (
-    <div className="px-2.5 bg-animated">
+    <div className="px-2.5">
       <Slider />
     </div>
   );
